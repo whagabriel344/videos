@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Vídeo</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        video {
+            max-width: 50%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button, a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        button:hover, a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao Meu Site</h1>
+    <h2>Assista ao vídeo abaixo:</h2>
+
+    <video id="meuVideo" controls>
+        <source src="20241204_170635.mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos.
+    </video>
+
+    <br><br>
+    <!-- Botões personalizados -->
+    <button onclick="playVideo()">▶ Play</button>
+    <button onclick="pauseVideo()">⏸ Pause</button>
+
+    <!-- Botão para baixar o vídeo -->
+    <a id="downloadButton" href="20241204_170635.mp4" download="meu-video.mp4">⬇ Baixar Vídeo</a>
+
+    <script>
+        const video = document.getElementById('meuVideo');
+
+        function playVideo() {
+            video.play();
+        }
+
+        function pauseVideo() {
+            video.pause();
+        }
+    </script>
+</body>
+</html>
